@@ -8,7 +8,7 @@ const fs = require("fs");
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'optimizm666666',
+    password: '*********',
     database: 'usersdb'
 });
 
