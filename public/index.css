@@ -1,0 +1,119 @@
+body {
+  display: flex; 
+} 
+
+#tweet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  padding: 10px;
+}
+
+#tweet-input {
+  width: 400px; 
+  height: 100px; 
+  resize: none;
+  border: 2px solid black;
+  background-color: #eaf8e3;
+}
+
+#tweet-button {
+  width: 200px;
+  height: 30px;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #cef8b9;
+  border-radius: 10px;
+}
+
+#user {
+  width: 400px;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#manual {
+  width: 400px;
+}
+
+#manual ul {
+  max-width: 100%;
+  word-break: break-word;
+}
+
+#manual li {
+  word-wrap: break-word;
+}
+
+#tweets-widget {
+  margin-top: 10px;
+  margin-right: auto;
+  width: 400px;
+  height: 500px;
+  overflow: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  word-break: break-word;
+  background-color: #e3ecf8;
+  border: 2px solid black;
+}
+
+#for_posting {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.tweet-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tweet-timestamp {
+  display: block;
+  font-size: 12px;
+  color: #888;
+}
+
+.tweet-userstamp{
+  display: block;
+  font-size: 12px;
+  color: #888;
+}
+
+.tweet-delete {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  cursor: pointer;
+  color: red;
+  padding: 5px 10px;
+  background-color: #f00;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.tweet-userstamp {
+  user-select: none;
+  pointer-events: none;
+}
+
+.tweet .tweet-userstamp .user-first {
+  color: black;
+}
+  
+.tweet .tweet-userstamp .user-rest {
+  color: white;
+}
