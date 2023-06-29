@@ -34,14 +34,14 @@ function toUnixTime(date){
 function writeToJSONandDatabase(user_message_time, user, message, time, res) {
   let data = fs.readFileSync("current_u_m.json", "utf8");
   let allData = JSON.parse(data);
-  if (allData.length > 3) { //save only last 4 messages in current_u_m.json
+  if (allData.length > 3) { //saves only last 4 messages in current_u_m.json
     allData.shift();
   }
   allData.push(user_message_time);
   data = JSON.stringify(allData);
   fs.writeFileSync("current_u_m.json", data);
 
-  const sql = "INSERT INTO users_messages (user, message, time) VALUES (?, ?, ?)"; //save all messages in database
+  const sql = "INSERT INTO users_messages (user, message, time) VALUES (?, ?, ?)"; //saves all messages in database
   const values = [user, message, time];
 
   connection.query(sql, values, (err, result) => {
