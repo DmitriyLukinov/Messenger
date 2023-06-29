@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="for_posting">
+    <div id="tweet-container">
+      <textarea id="tweet-input" rows="4" cols="50" maxlength="255" placeholder="Enter your text here..."></textarea>
+      <button id="tweet-button">Post Message</button>
+      <input id="user">User
+    </div>
+    <div id="manual">
+      <ul>
+        <li>Message cannot be more than 255 characters.</li>
+        <li>You can post a new message only 10 minutes later after the publication of the previous message.</li>
+        <li>User must be at least 4 characters long. When posting a message, only the first three characters will be visible to everyone. The remaining characters are secret, known only to the sender.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="tweets-widget"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>
