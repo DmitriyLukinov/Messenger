@@ -46,13 +46,13 @@ function writeToJSONandDatabase(user_message_time, user, message, time, res) {
 
   connection.query(sql, values, (err, result) => {
     if (err) {
-      console.error("Ошибка выполнения SQL-запроса:", err);
-      res.status(500).json({ error: "Ошибка сервера" });
+      console.error("SQL query execution error:", err);
+      res.status(500).json({ error: "Server error" });
       return;
     }
 
-    console.log("Сообщение успешно сохранено в базе данных");
-    res.status(200).json({ message: "Сообщение успешно опубликовано" });
+    console.log("The message was successfully saved to the database");
+    res.status(200).json({ message: "Post successfully published" });
   });
 }
 
@@ -71,8 +71,8 @@ app.post("/publish", jsonParser, (req, res) => {
 
     connection.query(sql_searchUser, sql_values, (err, result) => {
       if (err) {
-        console.error("Ошибка выполнения SQL-запроса:", err);
-        res.status(500).json({ error: "Ошибка сервера" });
+        console.error("SQL query execution error:", err);
+        res.status(500).json({ error: "Server error" });
         return;
       }
       if (result.length > 0) {                          // If the user is present in the database
